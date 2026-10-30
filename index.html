@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pedro Santana — Desenvolvedor</title>
-<meta name="description" content="Portfólio de Pedro de Sousa Santana, desenvolvedor .NET e estudante de Análise e Desenvolvimento de Sistemas.">
+<meta name="description" content="Portfólio de Pedro de Sousa Santana, desenvolvedor .NET com projetos de IA aplicada e estudante de Análise e Desenvolvimento de Sistemas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,8 @@
     --ok-soft:rgba(111,191,158,0.14);
     --paused:#C97B4A;
     --paused-soft:rgba(201,123,74,0.14);
+    --dev:#7FA8D9;
+    --dev-soft:rgba(127,168,217,0.14);
     --mono: 'JetBrains Mono', ui-monospace, monospace;
     --sans: 'Inter', -apple-system, sans-serif;
   }
@@ -125,7 +127,7 @@
   .btn-ghost:hover{background:var(--bg-panel-hover);border-color:var(--border-strong);}
 
   /* SECTIONS */
-  section{padding:64px 0;border-top:1px solid var(--border);}
+  section{padding:64px 0;border-top:1px solid var(--border);scroll-margin-top:56px;}
   h2{
     font-family:var(--mono);font-size:22px;font-weight:600;
     margin-bottom:8px;
@@ -166,6 +168,8 @@
   .status-live::before{background:var(--ok);}
   .status-paused{background:var(--paused-soft);color:var(--paused);}
   .status-paused::before{background:var(--paused);}
+  .status-dev{background:var(--dev-soft);color:var(--dev);}
+  .status-dev::before{background:var(--dev);}
   .service-desc{color:var(--text-muted);font-size:14.5px;margin-bottom:14px;max-width:640px;}
   .service-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
   .service-links{display:flex;gap:16px;font-family:var(--mono);font-size:13px;}
@@ -189,6 +193,10 @@
   }
   .contact-panel p{color:var(--text-muted);max-width:440px;margin:0 auto 24px;}
   .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+  button.btn{cursor:pointer;}
+  .copy-email.copied{background:var(--ok);border-color:var(--ok);}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 
   footer{padding:32px 0;text-align:center;color:var(--text-dim);font-family:var(--mono);font-size:12px;}
 
@@ -218,10 +226,10 @@
   <section class="hero" style="border-top:none;padding-top:56px;">
     <div class="terminal" id="terminal" aria-hidden="true"></div>
     <h1>Pedro Santana<br>constrói <span>serviços</span> que rodam de verdade.</h1>
-    <p class="lede">Desenvolvedor estagiário na <b>TecnoTRENDS</b>, trabalhando no ecossistema .NET. Estudante de <b>Análise e Desenvolvimento de Sistemas</b> no IFBA, com projetos próprios em back-end, agendamento e arquitetura de microsserviços.</p>
+    <p class="lede">Desenvolvedor estagiário na <b>TecnoTRENDS</b>, trabalhando no ecossistema .NET. Estudante de <b>Análise e Desenvolvimento de Sistemas</b> no IFBA, com projetos próprios em back-end, <b>IA aplicada</b> e automação de processos.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#projetos">Ver projetos</a>
-      <a class="btn btn-ghost" href="mailto:pedrossantana060@gmail.com">Falar comigo</a>
+      <a class="btn btn-ghost" href="#contato">Falar comigo</a>
       <a class="btn btn-ghost" href="Curriculo_Pedro_Santana.pdf" download>Baixar currículo</a>
     </div>
   </section>
@@ -230,12 +238,16 @@
     <div class="eyebrow">Sobre</div>
     <h2>Quem cuida dos serviços</h2>
     <p class="about-text">
-      Atuo como desenvolvedor há 6 meses na <b>TecnoTRENDS</b>, num estágio de 2 anos, desenvolvendo e mantendo aplicações desktop e mobile em C# e .NET, com integrações via WCF e deploy em Microsoft Azure. Em paralelo, curso <b>Análise e Desenvolvimento de Sistemas no IFBA</b> — 5º semestre, conclusão prevista para o fim de 2027 — onde aprofundo Java, Spring Boot e arquitetura de microsserviços.
+      Atuo como desenvolvedor há 6 meses na <b>TecnoTRENDS</b>, num estágio de 2 anos, desenvolvendo e mantendo aplicações desktop e mobile em C# e .NET, com integrações via WCF e deploy em Microsoft Azure. Em paralelo, curso <b>Análise e Desenvolvimento de Sistemas no IFBA</b> — 5º semestre, conclusão prevista para o fim de 2027 — onde aprofundo Java, Spring Boot e arquitetura de microsserviços. Também uso IA no dia a dia de desenvolvimento e em projetos próprios: integrando LLMs a aplicações e criando agentes que automatizam tarefas repetitivas.
     </p>
     <div class="stackgrid">
       <div class="stackcat">
         <h3>Back-end</h3>
-        <div class="chips"><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">.NET MAUI</span><span class="chip">WCF</span><span class="chip">Java</span><span class="chip">Spring Boot</span></div>
+        <div class="chips"><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">.NET MAUI</span><span class="chip">WCF</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Python</span><span class="chip">FastAPI</span></div>
+      </div>
+      <div class="stackcat">
+        <h3>IA &amp; automação</h3>
+        <div class="chips"><span class="chip">Gemini API</span><span class="chip">Claude</span><span class="chip">Prompt engineering</span><span class="chip">Agentes</span><span class="chip">OCR</span></div>
       </div>
       <div class="stackcat">
         <h3>Front-end</h3>
@@ -260,12 +272,40 @@
 
       <div class="service">
         <div class="service-top">
+          <span class="service-name">receita-acessivel</span>
+          <span class="status-pill status-dev">Em desenvolvimento</span>
+        </div>
+        <p class="service-desc">Usa IA para traduzir receitas médicas para pacientes com deficiência visual ou com qualquer nível de analfabetismo. No modo visual, reescreve a receita sem abreviações, em fonte grande e alto contraste. No modo analfabetismo, gera um cartão por remédio que se entende só pelas imagens: cor para associar à caixa, forma do remédio, para que serve, horários e quantidades em símbolos. Lê PDF (inclusive escaneado, com OCR de reserva), Word ou texto, e exporta em PDF, Word ou TXT, sem armazenar nenhuma receita.</p>
+        <div class="service-meta">
+          <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Gemini API</span><span class="chip">Prompt engineering</span><span class="chip">Tesseract OCR</span><span class="chip">Docker</span>
+        </div>
+        <div class="service-links">
+          <a href="https://github.com/santana-pedro/receita-acessivel" target="_blank" rel="noopener">↗ código</a>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-top">
           <span class="service-name">mark</span>
           <span class="status-pill status-live">Em produção</span>
         </div>
         <p class="service-desc">Sistema de agendamento de serviços com painel do prestador, agenda interativa, cadastro de serviços e localização. Meu projeto pessoal mais completo até agora, já implantado em produção — código-fonte privado.</p>
         <div class="service-meta">
           <span class="chip">C#</span><span class="chip">.NET</span><span class="chip">Blazor</span><span class="chip">SignalR</span><span class="chip">Entity Framework</span>
+        </div>
+        <div class="service-links">
+          <a href="https://markagendas.com.br/" target="_blank" rel="noopener">↗ acessar</a>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-top">
+          <span class="service-name">automacao-wis</span>
+          <span class="status-pill status-live">Em uso</span>
+        </div>
+        <p class="service-desc">Agente de IA que uso no estágio para lidar com o registro diário de horas: lê meus changesets no controle de versão e preenche as horas das tasks e os campos dos itens de trabalho vinculados (bugs e PBIs). Roda primeiro em modo teste, gerando um relatório para revisão, e só grava depois da minha aprovação. Substituiu uma tarefa manual e repetitiva do dia a dia. Ferramenta interna, sem código público.</p>
+        <div class="service-meta">
+          <span class="chip">Claude</span><span class="chip">Agentes</span><span class="chip">Prompt engineering</span><span class="chip">Automação de navegador</span><span class="chip">Azure DevOps</span>
         </div>
       </div>
 
@@ -285,12 +325,26 @@
 
       <div class="service" style="opacity:0.75;">
         <div class="service-top">
-          <span class="service-name">bolão intermed champion</span>
-          <span class="status-pill status-paused">Em pausa</span>
+          <span class="service-name">triagem-pln · TCC</span>
+          <span class="status-pill status-dev">Em planejamento</span>
         </div>
-        <p class="service-desc">Plataforma de bolão para evento esportivo, com autenticação, apostas e ranking, para uma empresa parceira. Desenvolvimento pausado aguardando aprovação para continuidade.</p>
+        <p class="service-desc">Trabalho de conclusão de curso: prova de conceito de um chatbot de triagem hospitalar com processamento de linguagem natural, para apoiar o Protocolo de Manchester em UPAs. O diferencial é mapear a linguagem coloquial nordestina para a terminologia clínica do protocolo.</p>
+        <div class="service-meta">
+          <span class="chip">Python</span><span class="chip">PLN</span><span class="chip">BERTimbau</span><span class="chip">LangChain</span><span class="chip">LLM local</span>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-top">
+          <span class="service-name">bolão intermed champion</span>
+          <span class="status-pill status-live">Em produção</span>
+        </div>
+        <p class="service-desc">Plataforma de bolão para evento esportivo, com autenticação, apostas e ranking, desenvolvida para uma empresa parceira e já implantada em produção.</p>
         <div class="service-meta">
           <span class="chip">React</span><span class="chip">Node.js</span>
+        </div>
+        <div class="service-links">
+          <a href="https://bolao-intermed-bahia.vercel.app/" target="_blank" rel="noopener">↗ acessar</a>
         </div>
       </div>
 
@@ -318,11 +372,16 @@
     <div class="eyebrow">Contato</div>
     <h2>Bora conversar</h2>
     <div class="contact-panel">
-      <p>Aberto a oportunidades de estágio e desenvolvimento back-end/.NET. Manda uma mensagem.</p>
+      <p>Aberto a oportunidades de estágio em desenvolvimento back-end/.NET e projetos com IA. Manda uma mensagem.</p>
       <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:pedrossantana060@gmail.com">pedrossantana060@gmail.com</a>
+        <button type="button" class="btn btn-primary copy-email" data-email="pedrossantana060@gmail.com" title="Clique para copiar">
+          <span class="copy-label">pedrossantana060@gmail.com</span>
+          <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+        <span class="sr-only" id="copy-status" aria-live="polite"></span>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/pedro-santana-b6b016354/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/santana-pedro" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/peu.santana_/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
   </section>
@@ -332,10 +391,47 @@
 <footer>© 2026 Pedro de Sousa Santana</footer>
 
 <script>
+  // Copiar e-mail ao clicar
+  (function(){
+    const btn = document.querySelector('.copy-email');
+    if(!btn) return;
+    const label = btn.querySelector('.copy-label');
+    const status = document.getElementById('copy-status');
+    const email = btn.dataset.email;
+    let timer;
+
+    function fallbackCopy(text){
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly','');
+      ta.style.position = 'absolute'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    btn.addEventListener('click', async () => {
+      let ok = false;
+      try { await navigator.clipboard.writeText(email); ok = true; }
+      catch(e) { ok = fallbackCopy(email); }
+      if(!ok){ window.location.href = 'mailto:' + email; return; }
+      clearTimeout(timer);
+      btn.classList.add('copied');
+      label.textContent = '✓ e-mail copiado!';
+      status.textContent = 'E-mail copiado para a área de transferência';
+      timer = setTimeout(() => {
+        btn.classList.remove('copied');
+        label.textContent = email;
+        status.textContent = '';
+      }, 2000);
+    });
+  })();
+
   const lines = [
     { text: '> iniciando painel de serviços...', cls: '' },
-    { text: '> carregando: mark, locadora-veiculos', cls: '' },
-    { text: '> status: 2 serviços no ar', cls: 'ok' },
+    { text: '> carregando serviços...', cls: '' },
+    { text: '> status: 3 serviços em produção', cls: 'ok' },
   ];
   const term = document.getElementById('terminal');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
